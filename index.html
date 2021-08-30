@@ -57,36 +57,59 @@
         <div class="col-md-5 offset-lg-1">
           <div class="row mt-2">
             <h2 class="h2 fw-light mb-4">Bio</h2>
+
             <div class="col-sm-5">
               <div class="pb-2 fw-bolder"><i class="far fa-calendar-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Birthdate</div>
             </div>
             <div class="col-sm-7">
               <div class="pb-2" id="pd_birthdate">pd_birthdate</div>
             </div>
+
             <div class="col-sm-5">
               <div class="pb-2 fw-bolder"><i class="far fa-envelope pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Email</div>
             </div>
             <div class="col-sm-7">
               <div class="pb-2" id="pd_email">pd_email</div>
             </div>
+
             <div class="col-sm-5">
               <div class="pb-2 fw-bolder"><i class="fas fa-phone pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Phone</div>
             </div>
             <div class="col-sm-7">
               <div class="pb-2" id="pd_phone">pd_phone</div>
             </div>
+
             <div class="col-sm-5">
               <div class="pb-2 fw-bolder"><i class="fab fa-whatsapp pe-2 text-muted" style="width:24px;opacity:0.85;"></i> WhatsApp</div>
             </div>
             <div class="col-sm-7">
               <div class="pb-2" id="pd_whatsapp">pd_whatsapp</div>
             </div>
+
+            <div class="col-sm-5">
+              <div class="pb-2 fw-bolder"><i class="fab fa-linkedin pe-2 text-muted" style="width:24px;opacity:0.85;"></i> LinkedIn</div>
+            </div>
+            <div class="col-sm-7">
+              <div class="pb-2" id="pd_linkedin">pd_linkedin</div>
+            </div>
+
+            <div class="col-sm-5">
+              <div class="pb-2 fw-bolder"><i class="fab fa-instagram pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Instagram</div>
+            </div>
+            <div class="col-sm-7">
+              <div class="pb-2" id="pd_instagram">pd_instagram</div>
+            </div>
+
             <div class="col-sm-5">
               <div class="pb-2 fw-bolder"><i class="fas fa-map-marker-alt pe-2 text-muted" style="width:24px;opacity:0.85;"></i> Address</div>
             </div>
             <div class="col-sm-7">
               <div class="pb-2" id="pd_address">pd_address</div>
             </div>
+
+
+
+
           </div>
         </div>
       </div>
@@ -148,7 +171,7 @@
     </div>
   </div>
 
-  <!-- <div class="shadow-1-strong bg-white my-5 p-5 d-print-none" id="portfolio" style="margin-bottom:7px!important;margin-top:7px!important">
+  <div class="shadow-1-strong bg-white my-5 p-5 d-print-none" id="portfolio" style="margin-bottom:7px!important;margin-top:7px!important">
     <div class="portfolio-section">
       <h2 class="h2 fw-light mb-4">Portfolio</h2>
       <div id="portfolio">
@@ -158,7 +181,8 @@
       </div>
 
     </div>
-  </div> -->
+  </div>
+  <br>
 
 
   </body>
@@ -248,7 +272,7 @@
     return `<div class="col-md-6">
       <div class="mb-3"><span class="fw-bolder">`+name+` `+x_add+`</span>
         <div class="progress my-2 rounded" style="height: 20px">
-          <div class="progress-bar `+progressclass+`" role="progressbar" data-aos="zoom-in-right" data-aos-delay="100" data-aos-anchor=".skills-section" style="width: `+value+`%;" aria-valuenow="`+value+`" aria-valuemin="0" aria-valuemax="100">`+label+`</div>
+          <div class="progress-bar `+progressclass+`" role="progressbar"  data-aos-delay="100" data-aos-anchor=".skills-section" style="width: `+value+`%;" aria-valuenow="`+value+`" aria-valuemin="0" aria-valuemax="100">`+label+`</div>
         </div>
       </div>
     </div>`;
@@ -310,7 +334,7 @@
 
 
 
-    return `<div class="timeline-card `+progressclass+`" data-aos="fade-in" data-aos-delay="0">
+    return `<div class="timeline-card `+progressclass+`"  data-aos-delay="0">
       <div class="timeline-head px-4 pt-3">
         <div class="h5">`+title+` <span class="text-muted h6">`+junc+` `+company+`</span></div>
       </div>
@@ -331,25 +355,29 @@
   function createPortfolio(itt,payload){
     if(itt%2!=0){
       return `<div class="row g-0">
-        <div class="col-md-6"><a href="https://dribbble.com/" target="_blank"><img class="img-fluid" src="images/project-1.jpg" width="800" height="500"/></a></div>
-        <div class="col-md-6 d-flex align-items-center" data-aos="fade-left" data-aos-delay="100">
+        <div class="col-md-6"><img class="img-fluid" src="images/portfolio/`+payload.image+`" width="800" height="500"/></div>
+        <div class="col-md-6 d-flex align-items-center"  data-aos-delay="100">
           <div class="m-4 mt-md-2">
-            <p class="text-teal text-small">`+payload.techstack+`</p>
             <h3>`+payload.title+`</h3>
             <p class="text-muted">`+payload.description+`</p>
+
+            <i>Techstack:</i>
+            <p class="text-teal text-small">`+payload.techstack+`</p>
           </div>
         </div>
       </div>`;
     }else{
       return `<div class="row g-0 portfolio-reverse">
-        <div class="col-md-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+        <div class="col-md-6 d-flex align-items-center" " data-aos-delay="100">
           <div class="m-4 mt-md-2 text-end">
-            <p class="text-teal text-small">`+payload.techstack+`</p>
             <h3>`+payload.title+`</h3>
             <p class="text-muted">`+payload.description+`</p>
+
+            <i>Techstack:</i>
+            <p class="text-teal text-small">`+payload.techstack+`</p>
           </div>
         </div>
-        <div class="col-md-6"><a href="https://www.behance.net/" target="_blank"><img class="img-fluid" src="images/project-2.jpg" width="800" height="500"/></a></div>
+        <div class="col-md-6"><img class="img-fluid" src="images/portfolio/`+payload.image+`" width="800" height="500"/></div>
       </div>`;
     }
   }
@@ -369,7 +397,9 @@
     "email"     : "drizkimp@gmail.com",
     "phone"     : "+62 88218 032583",
     "whatsapp"  : "+62 87884 044440",
-    "address"   : "Bogor, West Java, Indonesia"
+    "address"   : "Bogor, West Java, Indonesia",
+    "linkedin"  : "<a style='color:#4f4f4f' href='https://www.linkedin.com/in/drmp13'>drmp13</a>",
+    "instagram" : "<a style='color:#4f4f4f' href='https://instagram.com/drmp_'>drmp_</a>",
   };
 
   const about_me = `<p>
@@ -383,7 +413,7 @@
     {"name"  : "PHP", "value" : 95, "additional": "CodeIgniter, Laravel, Lumens"},
     {"name"  : "Python", "value" : 90, "additional": "FastAPI, Django"},
     {"name"  : "Node.JS", "value" : 80},
-    {"name"  : "Swift", "value" : 90,"additional" : "UIKit, SwiftUI"},
+    {"name"  : "Swift", "value" : 90,"additional" : "SwiftUI, UIKit, WatchKit, SpriteKit, ARKit, SceneKit, dll"},
     {"name"  : "Flutter", "value" : 70},
     {"name"  : "Java", "value" : 80},
     {"name"  : "Java (Android)", "value" : 70},
@@ -892,274 +922,276 @@
       "company"     : "Junior High School 12 Bogor",
       "date_start"  : "June 2012",
       "date_end"    : "",
-      "description" : "At the graduation ceremony, I was given an award as the best graduate in engineering because I got the highest rank in school exam."
+      "description" : "At the graduation ceremony, I was given an award as one of the best graduate because I got the highest rank in school exam."
     }
   ];
 
 const portfolio = [
 
   {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
+    "techstack"   : "Kubernetes / Docker / Python FastAPI / PHP Lumens / Golang / Node.JS / Socket.IO / MySQL / MongoDB / Redis / Memcached / Elasticsearch / Rabbit MQ / JWT / Kong API Gateway / NGINX / AzureStack / Traefik / Consul / Vault / HTML / CSS / Javascript / ReactJS",
     "title"       : "STIL Marketplace",
-    "description" : "asddas",
-    "image"       : "asdasd"
+    "description" : `STIL Marketplace is a platform for buying and selling agricultural and forestry products in Indonesia. The STIL Marketplace has features to facilitate the delivery process and track transaction delivery status in collaboration with various logistics vendors, this platform also cooperates with payment gateways for ease of transacting with various payment methods to installments.`,
+    "features"    : "Authentication / Authorization / Marketplace / Chat / Complain and Ticketing ",
+    "image"       : "no-image.png"
   },
   {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
+    "techstack"   : "Kubernetes / Docker / Python FastAPI / PHP Lumens /  MySQL /  Redis / Memcached / Rabbit MQ / JWT / Kong API Gateway / NGINX / AzureStack / Traefik / Consul / Vault / HTML / CSS / Javascript / ReactJS",
     "title"       : "STIL Academy",
-    "description" : "asddas",
-    "image"       : "asdasd"
+    "description" : "STIL Academy is an educational platform that aims to provide knowledge to both farmers and non-farmers in theory and practice. In this platform, various modules are available in the form of e-Books, Webinars, and other Video Tutorials.",
+    "image"       : "no-image.png"
   },
   {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "STIL Admin",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },{
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Analog Line Followers Robot",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Analog Obstacle Avoider Robot",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Analog VU Meter",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "BudgetIn",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "CSI Perhutani",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Channeling Perhutani",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Contact Center Ticketing for POTP",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
+    "techstack"   : "Kubernetes / Docker / Python FastAPI / PHP Lumens / Node.JS  / MongoDB / MQTT PubSub / Socket.IO / ReactJS / HTML / CSS / Javascript",
     "title"       : "Cultivathings IoT Platform",
-    "description" : "asddas",
-    "image"       : "asdasd"
+    "description" : "Cultivathings develop Internet of Things product in agriculture sector based on machine to machine communication that have many feature which allows all people from various professions to perform urban farming activity to plant their food by themselves in such an easier way. Cultivathings IoT Platform is a Software as a Services based platform which was developed to meet the monitoring and data collection needs of Cultivathings IoT Devices.",
+    "image"       : "cultivathings.png"
   },
   {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "DIANA: ASDP Indonesia Ferry",
-    "description" : "asddas",
-    "image"       : "asdasd"
+    "techstack"   : "Docker / Python Django / MySQL / HTML / CSS / Javascript",
+    "title"       : "Excogitatech PM Platform",
+    "description" : "Exogitatech are group of creative people who excogitate any technology-based project for business and personal use. Excogitatech have the expertise, proven methodologies, and tools to improve performance and deliver optimal business results. Excogitatech Project Management Platform is a web-based application that is used as a tool for tracking progress that can be monitored directly by the product owner, project manager, and all the teams involved.",
+    "image"       : "no-image.png"
   },
   {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "DIANA: Badan Nasional Penanggulangan Bencana",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "DIANA: Garuda Miles",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "DIANA: Kementrian Dalam Negeri",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "DIANA: Kementrian Investasi",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "DIANA: Lembaga Penjamin Simpanan",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "DIANA: Perhutani",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "DIANA: Pertamina 135",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "DIANA: Shoppee",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Excogitatech Platform",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Fruit Grabber Robot",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Digital Clock",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Harian Pakuan Raya",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Indihome Email Template",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Industri Kayu Perhutani",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "KFC Mobile Application",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Nokia Alcatel Mailserver",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Oil Press Machine (WebAds)",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Portable Air Conditioner",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "RANCAGE Sentul City",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Revamping UI/UX Toko Perhutani",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Smart Grain Dryer System",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Smart Hydroponics System",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Smart Street Lamp",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Smart Tracemaker RCar",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Softdrink Vending Machine",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Tapak Media",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Toko Perhutani",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
+    "techstack"   : "iOS / Swift / SwiftUI / UIKit / HealthKit / CoreData / Privacy & Security / User Notifications / HMVC",
     "title"       : "WeGain",
-    "description" : "asddas",
-    "image"       : "asdasd"
+    "description" : `<p>Why do people only concerned about the overweights? When the underweights also posses not less alarming health risk. Hence, we create WeGain. WeGain is an app specially created to help underweight person to gain weight. WeGain help you to calculate and fulfill your daily calorie intake.</p>`,
+    "image"       : "wegain.png"
   },
   {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Yayah Changer",
-    "description" : "asddas",
-    "image"       : "asdasd"
+    "techstack"   : "iOS / Swift / UIKit / CoreData / Privacy & Security / User Notifications / HMVC",
+    "title"       : "BudgetIn",
+    "description" : `<p>BudgetIn is a financial planning app with budgeting and tracking features created with young people in mind. You may have heard similar concepts from other financial applications, but BudgetIn is built different with our two main features; Quick-Add and Analytics Page. Our Quick-Add feature allows you to take a photo of your purchase and set a reminder for you to fill in the details later while our Analytics feature will compare your monthly budget to your monthly spendings so you can see the comparison in a more engaging way.</p>`,
+    "image"       : "budgetin.png"
   },
   {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Yayah Kampus Trader",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
-    "title"       : "Yayah Residence",
-    "description" : "asddas",
-    "image"       : "asdasd"
-  },
-  {
-    "techstack"   : "Kubernetes / Docker / Python / PHP / Golang / Node.JS / MySQL / MongoDB / Redis / Elasticsearch / Rabbit MQ ",
+    "techstack"   : "iOS / Swift / UIKit / ARKit / SceneKit / SpriteKit / Augmented Reality / AVFoundation<br><br><br>",
     "title"       : "Simucopter (iOS Virtual Drone)",
-    "description" : "asddas",
-    "image"       : "asdasd"
+    "description" : "An app that implement an Augmented Reality that can simulate the user to fly their Virtual Quadcopter Drone. Simucopter is equipped with a customized analog joystick made using SpriteKit so that flying a virtual drone becomes easier and more fun.",
+    "image"       : "simucopter.png"
+  },
+  {
+    "techstack"   : "Raspberry Pi 3 / Arduino Mega / Ethernet Shield / Heater / Cummulator / DC Motor / DHT11 / C++ / Cultivathings IoT Platform<br><br><br><br>",
+    "title"       : "Smart Grain Dryer System",
+    "description" : "The Smart Grain Dryer System is an Internet of Things-based tool equipped with various sensors and actuators that allow users to dry grain quickly and precisely without damaging the grain structure. The Smart Grain Dryer System is connected to the Cultivathings IoT Platform to make it easier to monitor and control activity on the device.",
+    "image"       : "smart-grain-dryer.png"
+  },
+  {
+    "techstack"   : "Raspberry Pi 3 / Arduino Mega / Ethernet Shield / Water Pump / LDR / pH Sensor / UV Light / Ultrasonic Sensor / Fan / DHT11 / C++ / Cultivathings IoT Platform<br><br><br><br>",
+    "title"       : "Smart Hydroponics System",
+    "description" : "The Smart Hydroponics System is an Internet of Things-based tool equipped with various sensors and actuators that allow users to carry out urban farming activities easily and precisely. The Smart Hydroponics System is connected to the Cultivathings IoT Platform to make it easier to monitor and control activities on the device.",
+    "image"       : "smart-Hydroponics-system.png"
+  },
+  {
+    "techstack"   : "Raspberry Pi 3 / Arduino Uno / Ethernet Shield / Solar Panel / Inverter / Accumulator / AC Lamp / Relay / LDR / C++ / Cultivathings IoT Platform<br><br><br><br>",
+    "title"       : "Smart Street Lamp",
+    "description" : "Smart Street Lamp is an Internet of Things-based device that is equipped with various sensors and actuators that allow users to get enough light for the night without spending additional electrical energy because this tool is equipped with solar panels. The Smart Street Lamp is connected to the Cultivathings IoT Platform to make it easier to monitor and control activity on the device.",
+    "image"       : "smart-street-lamp.png"
+  },
+  {
+    "techstack"   : "Arduino Uno / Car Chasis Kit 2WD / DC Motor / Bluetooth Module / Servo / Wireless Camera / C++ / Android Java<br><br><br><br>",
+    "title"       : "Smart Tracemaker RCar",
+    "description" : "Smart Tracemaker RCar is a wheeled robot that can be controlled via an Android smartphone and can also leave traces when it is run. The traces that have been made previously can be used by the robot to return to the owner because the robot is equipped with a camera module.",
+    "image"       : "smart-rcar.png"
+  },
+  {
+    "techstack"   : "Arduino Mega / Car Chasis Kit 2WD / DC Motor / TCRT5000 / L298N Driver / Color Sensor TCS3200 / Ultrasonic Sensor / Servo / Spacer / C++",
+    "title"       : "Fruit Grabber Robot",
+    "description" : "Fruit Grabber Robot is a wheeled robot which can follow the direction of the previously made trajectory (line followers) and is equipped with various sensors and actuators to be able to harvest ripe fruit automatically.",
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / PHP Lumens / MySQL / JWT / Memcached / HTML / CSS / Javascript ",
+    "title"       : "Luxuriours",
+    "description" : "Luxuriours is a C2C-based marketplace, fashion blogs, and legit checker that focuses on branded and luxury goods.",
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / MySQL / PostgreSQL / HTML / CSS / Javascript ",
+    "title"       : "Toko Perhutani",
+    "description" : "Perum Perhutani is a State-Owned Enterprise in Indonesia which has the duty and authority to carry out the planning, management, exploitation and protection of forests in its working area. Toko Perhutani is an online wood sales e-commerce owned by Perhutani.",
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / MySQL / PostgreSQL / HTML / CSS / Javascript ",
+    "title"       : "Channeling Toko Perhutani",
+    "description" : "Channeling Toko Perhutani is part of the Toko Perhutani which is one of the new sales channels that emphasizes the B2C concept. The Channeling Toko Perhutani is intended for new customers so that the main customers of the Toko Perhutani are not allowed to transact at the Channeling Toko Perhutani.",
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / MySQL / PostgreSQL / HTML / CSS / Javascript ",
+    "title"       : "Revamping UI/UX Toko Perhutani",
+    "description" : "Revamping the UI/UX the Toko Perhutani is a project that aims to change the appearance of the website and mobile application of the Toko Perhutani to become more user friendly and keep up with the times.",
+    "image"       : "perhutani-revamping.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / MySQL / HTML / CSS / Javascript ",
+    "title"       : "Contact Center Ticketing for POTP",
+    "description" : "This application was created with the aim of making it easier for agents who handle complaints tickets and questions from customers at Toko Perhutani. In addition to ticketing matters, this application is also equipped with various transaction monitoring or refund features that make it easier for agents to carry out their duties.",
+    "image"       : "ticketing-potp.png"
+  },
+  {
+    "techstack"   : "PHP Native / MySQL / HTML / CSS / Javascript ",
+    "title"       : "CSI Perhutani",
+    "description" : "Customer Satisfaction Index (CSI) is a quantitative analysis in the form of the percentage of happy customers in a customer satisfaction survey. CSI is needed to determine the overall level of customer satisfaction by taking into account the importance of the product or service attributes. CSI Perhutani was created to analyze Perhutani Store customer satisfaction. To get more respondents, CSI Perhutani is integrated by API with Toko Perhutani so that customers can only transact after filling out a survey.",
+    "image"       : "csi.png"
+  },
+  {
+    "techstack"   : "Docker / iOS / Android / Flutter (Dart) / Node.JS / MySQL",
+    "title"       : "KFC Home Delivery",
+    "description" : "KFC (Kentucky Fried Chicken) is an American fast food restaurant chain headquartered in Louisville, Kentucky, that specializes in fried chicken. In Indonesia, Kentucky Fried Chicken (KFC) has launched a Home Delivery (HD) service that operates 24 hours. The Home Delivery service is supported by web-based applications and smartphones that can be accessed via iOS or Android.",
+    "image"       : "kfc-hd.png"
+  },
+  {
+    "techstack"   : "Apache2 / Dovecot / Postfix / Roundcube",
+    "title"       : "Nokia Alcatel Mailserver",
+    "description" : "Telecommunications companies Nokia and Alcatel-Lucent officially merged the two companies into one entity and have been operating in Indonesia. In this project I was asked to create a simple mailserver for Nokia Alcatel contact center agents in Indonesia.",
+    "image"       : "nokia-email.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / MySQL / HTML / CSS / Javascript",
+    "title"       : "DIANA: ASDP Indonesia Ferry",
+    "description" : `PT ASDP Indonesia Ferry is one of the state-owned enterprises in Indonesia which is engaged in ferry transportation services and ferry port management for passengers, vehicles and goods. DIANA (Digital Information Management) is an application based on "product knowledge" that contains a collection of detailed information about the company, with the aim of making it easier for contact center agents to carry out their duties.`,
+    "image"       : "diana-asdp.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / MySQL / HTML / CSS / Javascript",
+    "title"       : "DIANA: Badan Nasional Penanggulangan Bencana",
+    "description" : `Badan Nasional Penanggulangan Bencana is a non-ministerial government agency that has the task of assisting the President of the Republic of Indonesia in carrying out disaster management. DIANA (Digital Information Management) is an application based on "product knowledge" that contains a collection of detailed information about the company, with the aim of making it easier for contact center agents to carry out their duties.`,
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / MySQL / HTML / CSS / Javascript",
+    "title"       : "DIANA: Garuda Miles",
+    "description" : `PT Garuda Indonesia Tbk is the national airline of Indonesia, while Garuda Miles is a contact center service owned by PT Garuda Indonesia Tbk. DIANA (Digital Information Management) is an application based on "product knowledge" that contains a collection of detailed information about the company, with the aim of making it easier for contact center agents to carry out their duties.`,
+    "image"       : "diana-garuda.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / MySQL / HTML / CSS / Javascript",
+    "title"       : "DIANA: Kementrian Dalam Negeri",
+    "description" : `Kementrian Dalam Negeri is a ministry within the Government of Indonesia in charge of domestic affairs. The Ministry of Home Affairs is under and responsible to the President. DIANA (Digital Information Management) is an application based on "product knowledge" that contains a collection of detailed information about the company, with the aim of making it easier for contact center agents to carry out their duties.`,
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / MySQL / HTML / CSS / Javascript",
+    "title"       : "DIANA: Kementrian Investasi",
+    "description" : `Kementrian Investasi is an Indonesian ministry tasked with handling investment affairs and was formed by Indonesian President Joko Widodo in the second reshuffle of the Kabinet Indonesia Maju on 28 April 2021. DIANA (Digital Information Management) is an application based on "product knowledge" that contains a collection of detailed information about the company, with the aim of making it easier for contact center agents to carry out their duties.`,
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / MySQL / HTML / CSS / Javascript",
+    "title"       : "DIANA: Lembaga Penjamin Simpanan",
+    "description" : `Lembaga Penjamin Simpanan is an independent institution that functions to guarantee deposits of banking customers in Indonesia. DIANA (Digital Information Management) is an application based on "product knowledge" that contains a collection of detailed information about the company, with the aim of making it easier for contact center agents to carry out their duties.`,
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / MySQL / HTML / CSS / Javascript",
+    "title"       : "DIANA: Perhutani",
+    "description" : `Perum Perhutani is a State-Owned Enterprise in Indonesia which has the duty and authority to carry out the planning, management, exploitation and protection of forests in its working area. DIANA (Digital Information Management) is an application based on "product knowledge" that contains a collection of detailed information about the company, with the aim of making it easier for contact center agents to carry out their duties.`,
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / MySQL / HTML / CSS / Javascript",
+    "title"       : "DIANA: Pertamina 135",
+    "description" : `Pertamina or PT Pertamina is a state-owned company in charge of managing oil and gas mining in Indonesia. Pertamina 135 is official contact center service owned by PT Pertamina. DIANA (Digital Information Management) is an application based on "product knowledge" that contains a collection of detailed information about the company, with the aim of making it easier for contact center agents to carry out their duties.`,
+    "image"       : "diana-pertamina.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / MySQL / HTML / CSS / Javascript",
+    "title"       : "DIANA: Shopee",
+    "description" : `Shopee is a commercial electronic site headquartered in Singapore under the auspices of Sea Limited. DIANA (Digital Information Management) is an application based on "product knowledge" that contains a collection of detailed information about the company, with the aim of making it easier for contact center agents to carry out their duties.`,
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / MySQL / HTML / CSS / Javascript",
+    "title"       : "Tapak Media",
+    "description" : "Tapak Media or PT Tapak Mulia Mediatama is a company engaged in talent management, film production, and creative events. The Tapak Media website contains various information about blogs or exclusive videos that have been created by talents who have been recruited by Tapak Media.",
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "Python Django / MySQL / HTML / CSS / Javascript",
+    "title"       : "Yayah Changer",
+    "description" : "YayahChanger is an Introducing Bonus and Payment Agent for several brokers to help prospective customers who join members to make transactions, a place to share information ranging from information about brokers, account opening, deposits and withdrawals with local banks.",
+    "image"       : "yayah-changer.png"
+  },
+  {
+    "techstack"   : "Python Django / MySQL / HTML / CSS / Javascript",
+    "title"       : "Kampus Trader Yayah Changer",
+    "description" : "Yayah Changer Trader Campus is an educational platform that contains exclusive videos on how to trade on the spectre.ai platform.",
+    "image"       : "yayah-kampus-trader.png"
+  },
+  {
+    "techstack"   : "Python Django / MySQL / HTML / CSS / Javascript",
+    "title"       : "Yayah Rooms",
+    "description" : "Yayah Rooms is a sharia-based hotel marketplace that brings together property owners for rent with potential users.",
+    "image"       : "yayah-rooms.png"
+  },
+  {
+    "techstack"   : "PHP Native / HTML / CSS / Javascript",
+    "title"       : "Oil Press Machine (WebAds)",
+    "description" : "A multi-language web page that contains information about Oil Press Machine products that are being sold, the product is located in Malaysia.",
+    "image"       : "oil-press-machine.png"
+  },
+  {
+    "techstack"   : "PHP Native / MySQL / HTML / CSS / Javascript",
+    "title"       : "RANCAGE Sentul City",
+    "description" : "A website that contains information about tourist destinations in the Sentul area, Bogor.",
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "Macromedia Dreamweaver ",
+    "title"       : "Harian Pakuan Raya",
+    "description" : "Harian Pakuan Raya presents local news that occurs in Bogor Regency, Bogor City, Sukabumi Regency, Sukabumi City, Cianjur Regency and nationally.",
+    "image"       : "pakar.png"
+  },
+  {
+    "techstack"   : "HTML / CSS / Javascript",
+    "title"       : "Indihome Email Template",
+    "description" : "Indonesia Digital Home is one of the service products from PT Telekomunikasi Indonesia in the form of a package of communication and data services such as landline telephone, internet, and interactive television services. In this project I provide an email template that is ready to be blasted.",
+    "image"       : "indihome-email.png"
+  },
+  {
+    "techstack"   : "Car Chasis Kit 2WD / Arduino Uno / DC Motor / Ultrasonic Sensor / L298N Driver / Spacer / C++",
+    "title"       : "Digital Obstacle Avoiding Robot",
+    "description" : "Digital Obstacle Avoiding Robot is an intelligent device which can automatically sense the obstacle in front of it and avoid them by turning itself.",
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "Car Chasis Kit 2WD / Arduino Uno / DC Motor / TCRT5000 / L298N Driver / Spacer / C++",
+    "title"       : "Digital Line Followers Robot",
+    "description" : "Line follower robot is a robot that can move along a line guide line. The guideline used in this case is a white line placed on a dark colored surface.",
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "Car Chasis Kit 2WD / DC Motor / LDR / Resistor / LED / 1N4148 / LM 358 / L298N Driver / Spacer",
+    "title"       : "Analog Line Followers Robot",
+    "description" : "Line follower robot is a robot that can move along a line guide line. The guideline used in this case is a white line placed on a dark colored surface.",
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "PAL / Transistor / Capacitor / Resistor / DC Waterpump / Switch",
+    "title"       : "Softdrink Vending Machine",
+    "description" : "A vending machine is a machine that can dispense items such as snacks, soft drinks such as sodas, consumer products and even gold and gems to customers automatically.",
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "LM 3914 / 1N4148 / BC558 / Resistor / LED / Jack or Microphone",
+    "title"       : "Analog VU Meter",
+    "description" : "A volume unit (VU) meter or standard volume indicator (SVI) is a device displaying a representation of the signal level in audio equipment.",
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "Arduino Uno / Multifunction Shield",
+    "title"       : "Digital Clock",
+    "description" : "A digital clock is another type of clock that displays the time in digital, a digital clock is run electronically.",
+    "image"       : "no-image.png"
+  },
+  {
+    "techstack"   : "Fan / Switch ",
+    "title"       : "Portable Air Conditioner",
+    "description" : "Portable Air Conditioner is an air conditioner that has a closed loop system or does not require an exhaust that dissipates hot air separately.",
+    "image"       : "no-image.png"
   },
 ];
 
@@ -1171,6 +1203,8 @@ $('#pd_email').text(personal_data.email);
 $('#pd_phone').text(personal_data.phone);
 $('#pd_whatsapp').text(personal_data.whatsapp);
 $('#pd_address').text(personal_data.address);
+$('#pd_linkedin').html(personal_data.linkedin);
+$('#pd_instagram').html(personal_data.instagram);
 
 //SET About Me
 $('#about_me').html(about_me);
