@@ -180,7 +180,7 @@ $('document').ready(function(){
 			$("p:nth-child("+i+")").fadeOut('slow').delay(1000).promise().done(function(){
 			i=i+1;
 			$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
-			if(i==60){
+			if(i==61){
 				$("#fot").hide("slow");
 				$("#end").show("slow");
 
