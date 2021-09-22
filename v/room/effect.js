@@ -123,11 +123,11 @@ $('document').ready(function(){
 		loopFive();
 		loopSix();
 		loopSeven();
-		
+
 		$(this).fadeOut('slow').delay(5000).promise().done(function(){
 			$('#cake_fadein').fadeIn('slow');
 		});
-	});	
+	});
 
 	$('#cake_fadein').click(function(){
 		$('.cake').fadeIn('slow');
@@ -143,7 +143,7 @@ $('document').ready(function(){
 		});
 	});
 
-		
+
 	$('#wish_message').click(function(){
 		 vw = $(window).width()/2;
 
@@ -168,34 +168,34 @@ $('document').ready(function(){
 			$('#story').fadeIn('slow');
 		});
 	});
-	
+
 	$('#story').click(function(){
 		$(this).fadeOut('slow');
 		$("#fot").show("slow");
 		$('.message').fadeIn('slow');
-		
+
 		var i;
 
 		function msgLoop (i) {
 			$("p:nth-child("+i+")").fadeOut('slow').delay(1000).promise().done(function(){
 			i=i+1;
 			$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
-			if(i==50){
+			if(i==60){
 				$("#fot").hide("slow");
-				$("#end").show("slow");	
-				
+				$("#end").show("slow");
+
 			}
 			else{
 				msgLoop(i);
-			}			
+			}
 
 		});
 			// body...
 
 		}
-		
+
 		msgLoop(0);
-				
+
 	});
 });
 
