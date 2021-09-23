@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+
 // Animation Timeline
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
@@ -304,5 +304,6 @@ const resolveFetch = () => {
   });
 };
 
+$( document ).ready(function() {
 resolveFetch().then(animationTimeline());
 });
