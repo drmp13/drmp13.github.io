@@ -295,6 +295,7 @@
 </script>
 <script type="text/javascript">
   function createExperience(type,title,company,date_start,date_end,description){
+
     if(type=="WORK"){
       progressclass = "timeline-card-success";
       junc = "at";
@@ -323,7 +324,12 @@
 
     if(date_start!=""){
       if(date_end!=""){
-        period = `<div class="text-muted text-small mb-3">`+getCustomDateFormat(date_start)+` - `+getCustomDateFormat(date_end)+` • `+timediff+`</div>`;
+        if(company=="PT STIL Hutanami Indonesia"){
+          var add_desc="<small>(Currently Inactive)</small>";
+        }else{
+          var add_desc="";
+        }
+        period = `<div class="text-muted text-small mb-3">`+getCustomDateFormat(date_start)+` - `+getCustomDateFormat(date_end)+` • `+timediff+` `+add_desc+` </div>`;
       }else{
         period = `<div class="text-muted text-small mb-3">`+date_start+`</div>`;
       }
@@ -480,6 +486,24 @@
   ];
 
   const experience_work = [
+
+    {
+      "title"       : "Fullstack Engineer",
+      "company"     : "PT Infomedia Nusantara",
+      "date_start"  : "2018-11-01",
+      "date_end"    : getToday(),
+      "description" : `<p>PT Infomedia Nusantara is part of the Telkom Group. Infomedia is the market leader (by market share) for contact center service providers in Indonesia. In line with the development of digital technology, Infomedia has developed its business as a provider of Business Process Outsourcing (BPO) solutions and manages various services for digitizing customer interaction functions (CRM) to digitizing corporate back office functions that can be customized to the company's business needs.</p>
+      <p>
+      I have one main responsibility to take care of one of the big clients, the client is Perhutani which is a state-owned company engaged in the forestry sector. I have to ensure that Perhutani's website and mobile application operations run smoothly, and I am also responsible for the process of developing new features or changing existing features. Besides Perhutani, I have also contributed to managing several other applications belonging to KFC Home Delivery, Garuda Miles, Pertamina 135, ASDP, Lembaga Penjamin Simpanan, Shopee, Kementrian Investasi, Badan Nasional Penanggulangan Bencana, and others.
+      </p>`
+    },
+    {
+      "title"       : "Fullstack Engineer <small>(Freelance)</small>",
+      "company"     : "PT Geo Dipa Energi",
+      "date_start"  : "2021-09-01",
+      "date_end"    : getToday(),
+      "description" : `<p>PT Geo Dipa Energi (Persero) is an Indonesian state-owned company domiciled in Jakarta. The company was founded in 2002 as a form of joint venture between Pertamina and PLN, PT Geo Dipa Energi (Persero) is an Indonesian state-owned company engaged in the management of Geothermal Power Plants or can be called PLTP. Geo Dipa Energi is designated as a BUMN through PP No. 62/2011. Geo Dipa Energi was confirmed as the manager of the Dieng Plateau WKP, starting January 1, 2007 through the Minister of Energy and Mineral Resources Regulation No. 2192.K/30/ MEM/2014. So far I have a responsibility to modify and maintain the procurement plan management application in PT Geo Dipa Energi.</p>`
+    },
     {
       "title"       : "Director of Information Technology & Digital",
       "company"     : "PT STIL Hutanami Indonesia",
@@ -493,23 +517,6 @@
         As I mentioned earlier, I also handle a lot of technical parts because this company is still in its early stages and doesn't have a lot of resources. I am involved in application development using several programming languages and other techstacks, managing Kubernetes Cluster's DevOps on the Microsoft Azure Stack, also perform load balancing, stress testing, and penetration testing in order to produce maximum output.
       </p>
       `
-    },
-    {
-      "title"       : "Fullstack Engineer",
-      "company"     : "PT Geo Dipa Energi",
-      "date_start"  : "2021-09-01",
-      "date_end"    : getToday(),
-      "description" : `<p>PT Geo Dipa Energi (Persero) is an Indonesian state-owned company domiciled in Jakarta. The company was founded in 2002 as a form of joint venture between Pertamina and PLN, PT Geo Dipa Energi (Persero) is an Indonesian state-owned company engaged in the management of Geothermal Power Plants or can be called PLTP. Geo Dipa Energi is designated as a BUMN through PP No. 62/2011. Geo Dipa Energi was confirmed as the manager of the Dieng Plateau WKP, starting January 1, 2007 through the Minister of Energy and Mineral Resources Regulation No. 2192.K/30/ MEM/2014. So far I have a responsibility to modify and maintain the procurement plan management application in PT Geo Dipa Energi.</p>`
-    },
-    {
-      "title"       : "DevOps Engineer",
-      "company"     : "PT Infomedia Nusantara",
-      "date_start"  : "2018-11-01",
-      "date_end"    : getToday(),
-      "description" : `<p>PT Infomedia Nusantara is part of the Telkom Group. Infomedia is the market leader (by market share) for contact center service providers in Indonesia. In line with the development of digital technology, Infomedia has developed its business as a provider of Business Process Outsourcing (BPO) solutions and manages various services for digitizing customer interaction functions (CRM) to digitizing corporate back office functions that can be customized to the company's business needs.</p>
-      <p>
-      I have one main responsibility to take care of one of the big clients, the client is Perhutani which is a state-owned company engaged in the forestry sector. I have to ensure that Perhutani's website and mobile application operations run smoothly, and I am also responsible for the process of developing new features or changing existing features. Besides Perhutani, I have also contributed to managing several other applications belonging to KFC Home Delivery, Garuda Miles, Pertamina 135, ASDP, Lembaga Penjamin Simpanan, Shopee, Kementrian Investasi, Badan Nasional Penanggulangan Bencana, and others.
-      </p>`
     },
     {
       "title"       : "Chief Executive Officer",
