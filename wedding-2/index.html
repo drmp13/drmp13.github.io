@@ -905,7 +905,13 @@ function copyRekening(){
   $temp.val($('#rekening_vini').html()).select();
   document.execCommand("copy");
   $temp.remove();
-  alert("Copied!");
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    text: 'Bank account has been copied to clipboard!',
+    showConfirmButton: false,
+    timer: 1500
+  });
 }
 // (function($) {/*
 // * Basic Count Up from Date and Time
