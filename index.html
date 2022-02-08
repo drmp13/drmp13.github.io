@@ -324,12 +324,7 @@
 
     if(date_start!=""){
       if(date_end!=""){
-        if(company=="PT STIL Hutanami Indonesia"){
-          var add_desc="<small>(Currently Inactive)</small>";
-        }else{
-          var add_desc="";
-        }
-        period = `<div class="text-muted text-small mb-3">`+getCustomDateFormat(date_start)+` - `+getCustomDateFormat(date_end)+` • `+timediff+` `+add_desc+` </div>`;
+        period = `<div class="text-muted text-small mb-3">`+getCustomDateFormat(date_start)+` - `+getCustomDateFormat(date_end)+` • `+timediff+` </div>`;
       }else{
         period = `<div class="text-muted text-small mb-3">`+date_start+`</div>`;
       }
@@ -488,7 +483,7 @@
   const experience_work = [
 
     {
-      "title"       : "Fullstack Engineer",
+      "title"       : "DevOps Engineer",
       "company"     : "PT Infomedia Nusantara",
       "date_start"  : "2018-11-01",
       "date_end"    : getToday(),
@@ -508,7 +503,7 @@
       "title"       : "Director of Information Technology & Digital",
       "company"     : "PT STIL Hutanami Indonesia",
       "date_start"  : "2019-10-01",
-      "date_end"    : getToday(),
+      "date_end"    : "2021-12-31",
       "description" : `<p>PT STIL Hutanami Indonesia is a marketplace which connects producers of eco-friendly, agriculture, and forestry product with their consumers. STIL is established with the goal of optimizing the resources that our farmers and forest villagers have and eases the distribution of eco-friendly products which come from Indonesian forest and agriculture to consumers.</p>
       <p>
         I joined with STIL since the company was founded (as one of the co-founders and shareholders). While working as CTO here, I handle various technical and non-technical matters related to IT. In big picture, I have responsibility to overseeing the development and dissemination of technology for external customers, vendors, and other clients to help improve and increase business. In details, my daily responsibilities are develop technical aspects of the company’s strategy to ensure alignment with its business goals, supervise system infrastructure to ensure functionality and efficiency, monitor KPIs and IT budgets to assess technological performance, communicate technology strategy to partners and investors, and also report all these things directly to a company's CEO.
@@ -520,22 +515,22 @@
     },
     {
       "title"       : "Chief Executive Officer",
-      "company"     : "Excogitatech",
-      "date_start"  : "2013-04-01",
-      "date_end"    : "2021-02-01",
-      "description" : `<p>Exogitatech are group of creative people who excogitate any technology-based project for business and personal use. Excogitatech have the expertise, proven methodologies, and tools to improve performance and deliver optimal business results. With the most complete end-to-end portfolio of design, engineering, implementation and deployment solutions ever assembled, Excogitatech empowers client with the interoperability, flexibility, and product customisation that client need to take on the digital transformation and improve operational efficiency.</p>
+      "company"     : "Cultivathings",
+      "date_start"  : "2017-09-01",
+      "date_end"    : "2019-09-01",
+      "description" : `<p>Cultivathings develop Internet of Things product in agriculture sector based on machine to machine communication that have many feature which allows all people from various professions to perform urban farming activity to plant their food by themselves in such an easier way. Cultivathings was formed based on my attention to the decline in farmer regeneration every year. In addition, every year agricultural land is getting narrower so that production in the agricultural sector also decreases. Therefore, I have the determination to form a company that creates technology to carry out urban farming activities.</p>
       <p>
-      Actually, Excogitatech is just my side project, where every time I have free time I receive a project under the banner of a company owned by an acquaintance of mine. At Excogitatech I have several core people in the team, but also always recruit freelancers according to the needs of ongoing projects. My team and I have completed many projects related to software development, computer networks, and design. Some of the projects we have completed are hotel management applications, virtual learning applications, e-commerce applications, internet cafe installations, banner designs, pamphlet designs, and similar projects.
+      During the development of Cultivathings, I was not only active as a CEO who was responsible for all business and investment matters, but here I also played an active role in technology matters such as the development of the Internet of Things system related to the embedded system and supporting application software. I am responsible for the development of applications on the website as well as mobile devices, and also responsible for taking care of all the logic in the machine including the sensor and actuator settings.
       </p>`
     },
     {
       "title"       : "Chief Executive Officer",
-      "company"     : "Cultivathings",
-      "date_start"  : "2016-09-01",
-      "date_end"    : "2018-09-01",
-      "description" : `<p>Cultivathings develop Internet of Things product in agriculture sector based on machine to machine communication that have many feature which allows all people from various professions to perform urban farming activity to plant their food by themselves in such an easier way. Cultivathings was formed based on my attention to the decline in farmer regeneration every year. In addition, every year agricultural land is getting narrower so that production in the agricultural sector also decreases. Therefore, I have the determination to form a company that creates technology to carry out urban farming activities.</p>
+      "company"     : "Excogitatech",
+      "date_start"  : "2013-04-01",
+      "date_end"    : "2016-02-01",
+      "description" : `<p>Exogitatech are group of creative people who excogitate any technology-based project for business and personal use. Excogitatech have the expertise, proven methodologies, and tools to improve performance and deliver optimal business results. With the most complete end-to-end portfolio of design, engineering, implementation and deployment solutions ever assembled, Excogitatech empowers client with the interoperability, flexibility, and product customisation that client need to take on the digital transformation and improve operational efficiency.</p>
       <p>
-      During the development of Cultivathings, I was not only active as a CEO who was responsible for all business and investment matters, but here I also played an active role in technology matters such as the development of the Internet of Things system related to the embedded system and supporting application software. I am responsible for the development of applications on the website as well as mobile devices, and also responsible for taking care of all the logic in the machine including the sensor and actuator settings.
+      Actually, Excogitatech is just my side project, where every time I have free time I receive a project under the banner of a company owned by an acquaintance of mine. At Excogitatech I have several core people in the team, but also always recruit freelancers according to the needs of ongoing projects. My team and I have completed many projects related to software development, computer networks, and design. Some of the projects we have completed are hotel management applications, virtual learning applications, e-commerce applications, internet cafe installations, banner designs, pamphlet designs, and similar projects.
       </p>`
     },
     {
@@ -559,7 +554,7 @@
       "title"       : "Student",
       "company"     : "Apple Developer Academy Indonesia",
       "date_start"  : "2021-01-01",
-      "date_end"    : getToday(),
+      "date_end"    : "2021-12-31",
       "description" : `<p>Apple Developer Academy is an academy that was founded with the aim of studying the creation and development of software that has been created by Apple so that graduates from this academy can become professional developers. The Academy focuses on coding, design and professional skills. The 10-month journey supports me to develop my own apps and become a well-rounded professional. During my time at the academy, I was more often active as a product owner or application developer.</p>`
     },
     {
@@ -688,6 +683,13 @@
 
   const experience_speaking = [
     {
+      "title"       : "Facilitator",
+      "company"     : "MINI WORKSHOP: Microservices @ PT Geo Dipa Energi",
+      "date_start"  : "February 2022",
+      "date_end"    : "",
+      "description" : "Mini Workshop that discusses microservices architecture and supporting DevOps tools such as Kubernetes."
+    },
+    {
       "title"       : "Guest Speaker",
       "company"     : "SEMINAR: Color Your First Career Journey by Wardah",
       "date_start"  : "July 2020",
@@ -753,6 +755,13 @@
   ];
 
   const experience_certification = [
+    {
+      "title"       : "Certificate of Completion",
+      "company"     : "Apple Developer Academy @ Binus",
+      "date_start"  : "",
+      "date_end"    : "",
+      "description" : "Apple Developer Academy is an academy that was founded with the aim of studying the creation and development of software that has been created by Apple so that graduates from this academy can become professional developers. The Academy focuses on coding, design and professional skills. The 10-month journey supports me to develop my own apps and become a well-rounded professional. During my time at the academy, I was more often active as a product owner or application developer."
+    },
     {
       "title"       : "Certificate of Competency: Internet of Things",
       "company"     : "ANTARES",
@@ -941,31 +950,48 @@
   ];
 
 const portfolio = [
-
   {
-    "techstack"   : "Kubernetes / Docker / Python FastAPI / PHP Lumens / Golang / Node.JS / Socket.IO / MySQL / MongoDB / Redis / Memcached / Elasticsearch / Rabbit MQ / JWT / Kong API Gateway / NGINX / AzureStack / Traefik / Consul / Vault / HTML / CSS / Javascript / ReactJS",
+    "techstack"   : "Kubernetes / Docker / Python FastAPI / Prometheus / PHP Lumens / Golang / Node.JS / Socket.IO / MySQL / MongoDB / Redis / Memcached / Elasticsearch / Rabbit MQ / JWT / Kong API Gateway / NGINX / AzureStack / Traefik / Consul / Vault / HTML / CSS / Javascript / ReactJS",
     "title"       : "STIL Marketplace",
     "description" : `STIL Marketplace is a platform for buying and selling agricultural and forestry products in Indonesia. The STIL Marketplace has features to facilitate the delivery process and track transaction delivery status in collaboration with various logistics vendors, this platform also cooperates with payment gateways for ease of transacting with various payment methods to installments.`,
     "features"    : "Authentication / Authorization / Marketplace / Chat / Complain and Ticketing ",
     "image"       : "stil-marketplace.png"
   },
   {
-    "techstack"   : "Kubernetes / Docker / Python FastAPI / PHP Lumens /  MySQL /  Redis / Memcached / Rabbit MQ / JWT / Kong API Gateway / NGINX / AzureStack / Traefik / Consul / Vault / HTML / CSS / Javascript / ReactJS",
+    "techstack"   : "Kubernetes / Docker / Python FastAPI / Prometheus / PHP Lumens /  MySQL /  Redis / Memcached / Rabbit MQ / JWT / Kong API Gateway / NGINX / AzureStack / Traefik / Consul / Vault / HTML / CSS / Javascript / ReactJS",
     "title"       : "STIL Academy",
     "description" : "STIL Academy is an educational platform that aims to provide knowledge to both farmers and non-farmers in theory and practice. In this platform, various modules are available in the form of e-Books, Webinars, and other Video Tutorials.",
     "image"       : "stil-academy.png"
+  },
+  {
+    "techstack"   : "Kubernetes / Docker / Synology / Prometheus / Node.JS / Socket.IO / PostgreSQL / MongoDB / Rabbit MQ / JWT / Kong API Gateway / NGINX / Traefik / HTML / CSS / Javascript / ReactJS",
+    "title"       : "GeoDipa Delivery & Invoice Monitoring",
+    "description" : "This is an internal application owned by PT Geo Dipa Energi which is used to manage the entire delivery process and invoices from procurement within the company. This application can be accessed by Vendors and internal PT Geo Dipa Energi.",
+    "image"       : "delivery-invoice.png"
+  },
+  {
+    "techstack"   : "iOS / Swift / SwiftLint / UIKit / APNS / NodeJS / PHP CodeIgniter / Privacy & Security / User Notifications / HMVC / Docker / MySQL",
+    "title"       : "Monecate",
+    "description" : "Monecate is an application to manages user's cashflows tracking and plan user's savings to achieve user's goals in a fun way. Monecate runs on iOS systems with databases stored in a microservices backend cluster.",
+    "image"       : "monecate.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / MySQL / HTML / CSS / Javascript ",
+    "title"       : "Tomeet",
+    "description" : "Tomeet is an internal application at PT Geo Dipa Energi to manage Zoom Meeting room reservations. There are many excellent features in Tomeet such as finding available meeting rooms on the selected date, calendar and reminder features, as well as email blast meeting announcements.",
+    "image"       : "tomeet.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / MySQL / HTML / CSS / Javascript ",
+    "title"       : "GeoDipa Procplan",
+    "description" : "This is an internal application owned by PT Geo Dipa Energi which is used to manage the Procurement Plan of all divisions and units within the company. This application is equipped with import and export features in the form of XLS to facilitate end users in data management.",
+    "image"       : "procplan.png"
   },
   {
     "techstack"   : "Google Cloud Platform / Kubernetes / Docker / Python FastAPI / PHP Lumens / Node.JS  / MongoDB / MQTT PubSub / Socket.IO / ReactJS / HTML / CSS / Javascript",
     "title"       : "Cultivathings IoT Platform",
     "description" : "Cultivathings develop Internet of Things product in agriculture sector based on machine to machine communication that have many feature which allows all people from various professions to perform urban farming activity to plant their food by themselves in such an easier way. Cultivathings IoT Platform is a Software as a Services based platform which was developed to meet the monitoring and data collection needs of Cultivathings IoT Devices.",
     "image"       : "cultivathings.png"
-  },
-  {
-    "techstack"   : "Docker / Python Django / MySQL / HTML / CSS / Javascript",
-    "title"       : "Excogitatech Platform",
-    "description" : "Exogitatech are group of creative people who excogitate any technology-based project for business and personal use. Excogitatech have the expertise, proven methodologies, and tools to improve performance and deliver optimal business results. Excogitatech Project Management Platform is a web-based application that is used as a tool for tracking progress that can be monitored directly by the product owner, project manager, and all the teams involved.",
-    "image"       : "excogitatech.png"
   },
   {
     "techstack"   : "iOS / watchOS / Swift / UIKit / WatchKit / AVFoundation / SpeechRecognition / CoreData / Privacy & Security / User Notifications / HMVC",
@@ -991,30 +1017,7 @@ const portfolio = [
     "description" : "An app that implement an Augmented Reality that can simulate the user to fly their Virtual Quadcopter Drone. Simucopter is equipped with a customized analog joystick made using SpriteKit so that flying a virtual drone becomes easier and more fun.",
     "image"       : "simucopter.png"
   },
-  {
-    "techstack"   : "Raspberry Pi 3 / Arduino Mega / Ethernet Shield / Heater / Cummulator / DC Motor / DHT11 / C++ / Cultivathings IoT Platform<br><br><br><br>",
-    "title"       : "Smart Grain Dryer System",
-    "description" : "The Smart Grain Dryer System is an Internet of Things-based tool equipped with various sensors and actuators that allow users to dry grain quickly and precisely without damaging the grain structure. The Smart Grain Dryer System is connected to the Cultivathings IoT Platform to make it easier to monitor and control activity on the device.",
-    "image"       : "smart-grain-dryer.png"
-  },
-  {
-    "techstack"   : "Raspberry Pi 3 / Arduino Mega / Ethernet Shield / Water Pump / LDR / pH Sensor / UV Light / Ultrasonic Sensor / Fan / DHT11 / C++ / Cultivathings IoT Platform<br><br><br><br>",
-    "title"       : "Smart Hydroponics System",
-    "description" : "The Smart Hydroponics System is an Internet of Things-based tool equipped with various sensors and actuators that allow users to carry out urban farming activities easily and precisely. The Smart Hydroponics System is connected to the Cultivathings IoT Platform to make it easier to monitor and control activities on the device.",
-    "image"       : "smart-hydroponics-system.png"
-  },
-  {
-    "techstack"   : "Raspberry Pi 3 / Arduino Uno / Ethernet Shield / Solar Panel / Inverter / Accumulator / AC Lamp / Relay / LDR / C++ / Cultivathings IoT Platform<br><br><br><br>",
-    "title"       : "Smart Street Lamp",
-    "description" : "Smart Street Lamp is an Internet of Things-based device that is equipped with various sensors and actuators that allow users to get enough light for the night without spending additional electrical energy because this tool is equipped with solar panels. The Smart Street Lamp is connected to the Cultivathings IoT Platform to make it easier to monitor and control activity on the device.",
-    "image"       : "smart-street-lamp.png"
-  },
-  {
-    "techstack"   : "Arduino Uno / Car Chasis Kit 2WD / DC Motor / Bluetooth Module / Servo / Wireless Camera / C++ / Android Java<br><br><br><br>",
-    "title"       : "Smart Tracemaker RCar",
-    "description" : "Smart Tracemaker RCar is a wheeled robot that can be controlled via an Android smartphone and can also leave traces when it is run. The traces that have been made previously can be used by the robot to return to the owner because the robot is equipped with a camera module.",
-    "image"       : "smart-rcar.png"
-  },
+
   {
     "techstack"   : "PHP CodeIgniter / PHP Lumens / MySQL / JWT / Memcached / HTML / CSS / Javascript ",
     "title"       : "Luxuriours",
@@ -1022,16 +1025,10 @@ const portfolio = [
     "image"       : "luxuriours.png"
   },
   {
-    "techstack"   : "PHP CodeIgniter / MySQL / PostgreSQL / HTML / CSS / Javascript ",
-    "title"       : "Toko Perhutani",
-    "description" : "Perum Perhutani is a State-Owned Enterprise in Indonesia which has the duty and authority to carry out the planning, management, exploitation and protection of forests in its working area. Toko Perhutani is an online wood sales e-commerce owned by Perhutani.",
-    "image"       : "perhutani-old.png"
-  },
-  {
-    "techstack"   : "PHP CodeIgniter / MySQL / PostgreSQL / HTML / CSS / Javascript ",
-    "title"       : "Channeling Toko Perhutani",
-    "description" : "Channeling Toko Perhutani is part of the Toko Perhutani which is one of the new sales channels that emphasizes the B2C concept. The Channeling Toko Perhutani is intended for new customers so that the main customers of the Toko Perhutani are not allowed to transact at the Channeling Toko Perhutani.",
-    "image"       : "perhutani-channeling.png"
+    "techstack"   : "PHP CodeIgniter / MySQL / PostgreSQL / HTML / CSS / Javascript / NGINX Ingress / RabbitMQ<br><br><br>",
+    "title"       : "<br><br><br>Toko Perhutani All Products",
+    "description" : "Toko Perhutani All Product is an enhancement from the Toko Perhutani which previously only sold logs, now also sells non-timber products both export and domestic, the wood industry, tourism, events, PPOB.",
+    "image"       : "perhutani-ap.png"
   },
   {
     "techstack"   : "PHP CodeIgniter / MySQL / PostgreSQL / HTML / CSS / Javascript ",
@@ -1040,10 +1037,10 @@ const portfolio = [
     "image"       : "perhutani-new.png"
   },
   {
-    "techstack"   : "PHP CodeIgniter / MySQL / PostgreSQL / HTML / CSS / Javascript / NGINX Ingress / RabbitMQ<br><br><br>",
-    "title"       : "<br><br><br>Toko Perhutani All Products",
-    "description" : "Toko Perhutani All Product is an enhancement from the Toko Perhutani which previously only sold logs, now also sells non-timber products both export and domestic, the wood industry, tourism, events, PPOB.",
-    "image"       : "perhutani-ap.png"
+    "techstack"   : "PHP CodeIgniter / MySQL / PostgreSQL / HTML / CSS / Javascript ",
+    "title"       : "Channeling Toko Perhutani",
+    "description" : "Channeling Toko Perhutani is part of the Toko Perhutani which is one of the new sales channels that emphasizes the B2C concept. The Channeling Toko Perhutani is intended for new customers so that the main customers of the Toko Perhutani are not allowed to transact at the Channeling Toko Perhutani.",
+    "image"       : "perhutani-channeling.png"
   },
   {
     "techstack"   : "PHP CodeIgniter / MySQL / HTML / CSS / Javascript ",
@@ -1056,6 +1053,18 @@ const portfolio = [
     "title"       : "CSI Perhutani",
     "description" : "Customer Satisfaction Index (CSI) is a quantitative analysis in the form of the percentage of happy customers in a customer satisfaction survey. CSI is needed to determine the overall level of customer satisfaction by taking into account the importance of the product or service attributes. CSI Perhutani was created to analyze Perhutani Store customer satisfaction. To get more respondents, CSI Perhutani is integrated by API with Toko Perhutani so that customers can only transact after filling out a survey.",
     "image"       : "csi.png"
+  },
+  {
+    "techstack"   : "PHP CodeIgniter / MySQL / PostgreSQL / HTML / CSS / Javascript ",
+    "title"       : "Toko Perhutani",
+    "description" : "Perum Perhutani is a State-Owned Enterprise in Indonesia which has the duty and authority to carry out the planning, management, exploitation and protection of forests in its working area. Toko Perhutani is an online wood sales e-commerce owned by Perhutani.",
+    "image"       : "perhutani-old.png"
+  },
+  {
+    "techstack"   : "Docker / Python Django / MySQL / HTML / CSS / Javascript",
+    "title"       : "Excogitatech Platform",
+    "description" : "Exogitatech are group of creative people who excogitate any technology-based project for business and personal use. Excogitatech have the expertise, proven methodologies, and tools to improve performance and deliver optimal business results. Excogitatech Project Management Platform is a web-based application that is used as a tool for tracking progress that can be monitored directly by the product owner, project manager, and all the teams involved.",
+    "image"       : "excogitatech.png"
   },
   {
     "techstack"   : "Docker / iOS / Android / Flutter (Dart) / Node.JS / MySQL",
@@ -1146,6 +1155,30 @@ const portfolio = [
     "title"       : "Yayah Rooms",
     "description" : "Yayah Rooms is a sharia-based hotel marketplace that brings together property owners for rent with potential users.",
     "image"       : "yayah-rooms.png"
+  },
+  {
+    "techstack"   : "Raspberry Pi 3 / Arduino Mega / Ethernet Shield / Heater / Cummulator / DC Motor / DHT11 / C++ / Cultivathings IoT Platform<br><br><br><br>",
+    "title"       : "Smart Grain Dryer System",
+    "description" : "The Smart Grain Dryer System is an Internet of Things-based tool equipped with various sensors and actuators that allow users to dry grain quickly and precisely without damaging the grain structure. The Smart Grain Dryer System is connected to the Cultivathings IoT Platform to make it easier to monitor and control activity on the device.",
+    "image"       : "smart-grain-dryer.png"
+  },
+  {
+    "techstack"   : "Raspberry Pi 3 / Arduino Mega / Ethernet Shield / Water Pump / LDR / pH Sensor / UV Light / Ultrasonic Sensor / Fan / DHT11 / C++ / Cultivathings IoT Platform<br><br><br><br>",
+    "title"       : "Smart Hydroponics System",
+    "description" : "The Smart Hydroponics System is an Internet of Things-based tool equipped with various sensors and actuators that allow users to carry out urban farming activities easily and precisely. The Smart Hydroponics System is connected to the Cultivathings IoT Platform to make it easier to monitor and control activities on the device.",
+    "image"       : "smart-hydroponics-system.png"
+  },
+  {
+    "techstack"   : "Raspberry Pi 3 / Arduino Uno / Ethernet Shield / Solar Panel / Inverter / Accumulator / AC Lamp / Relay / LDR / C++ / Cultivathings IoT Platform<br><br><br><br>",
+    "title"       : "Smart Street Lamp",
+    "description" : "Smart Street Lamp is an Internet of Things-based device that is equipped with various sensors and actuators that allow users to get enough light for the night without spending additional electrical energy because this tool is equipped with solar panels. The Smart Street Lamp is connected to the Cultivathings IoT Platform to make it easier to monitor and control activity on the device.",
+    "image"       : "smart-street-lamp.png"
+  },
+  {
+    "techstack"   : "Arduino Uno / Car Chasis Kit 2WD / DC Motor / Bluetooth Module / Servo / Wireless Camera / C++ / Android Java<br><br><br><br>",
+    "title"       : "Smart Tracemaker RCar",
+    "description" : "Smart Tracemaker RCar is a wheeled robot that can be controlled via an Android smartphone and can also leave traces when it is run. The traces that have been made previously can be used by the robot to return to the owner because the robot is equipped with a camera module.",
+    "image"       : "smart-rcar.png"
   },
   {
     "techstack"   : "PHP Native / HTML / CSS / Javascript",
