@@ -24,16 +24,6 @@
         }
       </style>
     </noscript>
-<!--     <script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=brxc129drxgm24c2vij7tw" async="true"></script> -->
-    <script>
-      window.markerConfig = {
-        project: '6551ebe0381d8d99ae3bfdd4', 
-        source: 'snippet'
-      };
-    
-    !function(e,r,a){if(!e.__Marker){e.__Marker={};var t=[],n={__cs:t};["show","hide","isVisible","capture","cancelCapture","unload","reload","isExtensionInstalled","setReporter","setCustomData","on","off"].forEach(function(e){n[e]=function(){var r=Array.prototype.slice.call(arguments);r.unshift(e),t.push(r)}}),e.Marker=n;var s=r.createElement("script");s.async=1,s.src="https://edge.marker.io/latest/shim.js";var i=r.getElementsByTagName("script")[0];i.parentNode.insertBefore(s,i)}}(window,document);
-    </script>
-        
   </head>
   <body class="bg-light" id="top">
     <div class="page-content">
@@ -125,7 +115,7 @@
       </div>
     </div>
   </div>
-  <div class="shadow-1-strong bg-white my-5 p-5" id="skills" style="margin-bottom:7px!important;margin-top:7px!important">
+  <!-- <div class="shadow-1-strong bg-white my-5 p-5" id="skills" style="margin-bottom:7px!important;margin-top:7px!important">
     <div class="skills-section">
       <h2 class="h2 fw-light mb-4">Technical Skills</h2>
       <h6><u>Software Development</u></h6>
@@ -137,13 +127,13 @@
       <h6><u>Wireframing, Design, and Branding</u></h6>
       <div class="row" id="skills_tech_design"></div>
     </div>
-  </div>
-  <div class="shadow-1-strong bg-white my-5 p-5" id="skills" style="margin-bottom:7px!important;margin-top:7px!important">
+  </div> -->
+  <!-- <div class="shadow-1-strong bg-white my-5 p-5" id="skills" style="margin-bottom:7px!important;margin-top:7px!important">
     <div class="skills-section">
       <h2 class="h2 fw-light mb-4">Interpersonal & Management Skills</h2>
       <div class="row" id="skills_interpersonal"></div><br>
     </div>
-  </div>
+  </div> -->
   <div class="shadow-1-strong bg-white my-5 p-5" id="experience" style="margin-bottom:7px!important;margin-top:7px!important">
     <div class="work-experience-section">
       <h2 class="h2 fw-light mb-4">Work Experience</h2>
@@ -184,6 +174,9 @@
   <div class="shadow-1-strong bg-white my-5 p-5 d-print-none" id="portfolio" style="margin-bottom:7px!important;margin-top:7px!important">
     <div class="portfolio-section">
       <h2 class="h2 fw-light mb-4">Portfolio</h2>
+      <p style="margin-top:-20px">
+        <small><i>Last update: 2022-01-01</i></small>
+      </p>
       <div id="portfolio">
 
 
@@ -414,7 +407,7 @@
   };
 
   const about_me = `<p>
-                      I'm an <b>IT enthusiast</b> and agriculturist. I'm a fast learner and I'd love to learn new things. I have life time goal that is to fight world hunger and global warming through technology innovation. Save the green earth and contribute something in survival of mankind is really what my goal is all about. I will do my best and I will never dodge a responsibillity. Other than that, I enjoy an extreme cup of coffee and a light discussion.
+                      I'm a <b>seasoned professional</b> with a diverse background in technology, business, and entrepreneurship. I'm a fast learner and I'd love to learn new things. My professional journey reflects a commitment to innovation, leadership, and making a positive impact through technology and business ventures. I thrive on challenges, embrace new opportunities, and continuously seek to contribute to the ever-evolving landscape of technology and entrepreneurship. Other than that, I enjoy an extreme cup of coffee and a light discussion.
                     </p>`;
 
   const skills_tech_software = [
@@ -492,6 +485,20 @@
 
   const experience_work = [
     {
+      "title"       : "President Commissioner",
+      "company"     : "PT Elite Maynard Beauty",
+      "date_start"  : "2022-12-29",
+      "date_end"    : getToday(),
+      "description" : `<p>PT Elite Maynard Beauty is a contract manufacturing (CM) company specializing in providing beauty product production services. As a CM company, Elite Maynard Beauty caters to beauty brands looking to develop and manufacture skincare, cosmetics, and other beauty products without managing their own production facilities. The company offers end-to-end solutions, including research and formulation development, product testing, and high-quality mass production.</p>`
+    },
+    {
+      "title"       : "Chief Executive Officer",
+      "company"     : "EASIM GLOBAL LTD",
+      "date_start"  : "2022-08-03",
+      "date_end"    : getToday(),
+      "description" : `<p>EASIMGLOBAL is a revolutionary platform that dedicated to simplifying the purchase and management of mobile data plans globally. Serving both data-conscious individuals and frequent travelers, our platform operates in over 190 countries, providing users with extensive mobile data options. The game-changing EASIMGLOBAL eSIM technology eliminates the need for physical SIM cards, offering seamless connectivity without the hassle of switching cards. Committed to a borderless and user-friendly mobile data experience, EASIMGLOBAL redefines global connectivity standards, ensuring users stay connected effortlessly and without limitations.</p>`
+    },
+    {
       "title"       : "Head of Research & Development",
       "company"     : "Jubelio (PT Guardia Teknologi Indonesia)",
       "date_start"  : "2022-03-28",
@@ -499,19 +506,19 @@
       "description" : `<p>Jubelio is a fast growing startup specializing in Omni-channel Platform solution for retailers and wholesalers. Jubelio have mission to simplify customer's business by integrating back office, warehouse, marketplace, webstore and point of sales (POS) into one dashboard. Jubelio company culture is a fast moving company, here I have main responsibility to conduct research and development related to the technologies used in Jubelio in order to improve the reliability and efficiency of all applications on the Jubelio Platform.</p>`
     },
     {
+      "title"       : "Principal Engineer",
+      "company"     : "Donboro Tech (Monecate)",
+      "date_start"  : "2021-09-01",
+      "date_end"    : getToday(),
+      "description" : `<p>Donboro Tech is a Startup that was born from Apple Developer Academy Program. Donboro Tech participates in the Catalyst Program and various incubations/accelerations to deliver a better financial management application "Monecate" to users. Here I have the responsibility for providing guidance and mentorship to the engineering team, they set the direction for software development, ensuring adherence to best practices and high coding standards. Their role extends to overseeing the design and architecture of complex systems, making critical decisions on technology adoption, and aligning technical choices with business objectives.</p>
+      `
+    },
+    {
       "title"       : "Fullstack Engineer",
       "company"     : "PT Geo Dipa Energi",
       "date_start"  : "2021-09-01",
-      "date_end"    : getToday(),
+      "date_end"    : "2022-02-15",
       "description" : `<p>PT Geo Dipa Energi (Persero) is an Indonesian state-owned company domiciled in Jakarta. The company was founded in 2002 as a form of joint venture between Pertamina and PLN, PT Geo Dipa Energi (Persero) is an Indonesian state-owned company engaged in the management of Geothermal Power Plants or can be called PLTP. Geo Dipa Energi is designated as a BUMN through PP No. 62/2011. Geo Dipa Energi was confirmed as the manager of the Dieng Plateau WKP, starting January 1, 2007 through the Minister of Energy and Mineral Resources Regulation No. 2192.K/30/ MEM/2014. So far I have a responsibility to modify and maintain the procurement plan management application in PT Geo Dipa Energi.</p>`
-    },
-    {
-      "title"       : "DevSecOps Consultant",
-      "company"     : "Donboro Tech",
-      "date_start"  : "2021-09-01",
-      "date_end"    : getToday(),
-      "description" : `<p>Donboro Tech is a Startup that was born from Apple Developer Academy Program. Donboro Tech participates in the Catalyst Program and various incubations/accelerations to deliver a better financial management application "Monecate" to users. Here I have the responsibility to guide and provide input to engineers at Donboro Tech regarding matters related to technology, especially in the field of DevSecOps.</p>
-      `
     },
     {
       "title"       : "Fullstack Engineer",
@@ -706,6 +713,13 @@
   ];
 
   const experience_speaking = [
+    {
+      "title"       : "Guest Speaker",
+      "company"     : "TALKSHOW: Micro IT Company Visit 2022",
+      "date_start"  : "June 2022",
+      "date_end"    : "",
+      "description" : `Sharing with students related to my experiences on work.`
+    },
     {
       "title"       : "Facilitator",
       "company"     : "MINI WORKSHOP: Microservices @ PT Geo Dipa Energi",
@@ -1325,7 +1339,3 @@ setPortfolio($('#portfolio'),portfolio);
 <script src="scripts/mdb.min.js?ver=1.2.1"></script>
 <script src="scripts/aos.js?ver=1.2.1"></script>
 <script src="scripts/main.js?ver=1.2.1"></script>
-
-<!--
-  2. Ganti tanggal di Education
--->
